@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Alert from './Alert';
 import Accordion from './Accordian';
+import AvatarMain from './AvatarMain';
 const components = [
     {
         name:"Accordion",
@@ -50,6 +51,8 @@ const Demo_Component = () => {
                 return <Accordion title="Section 1" content="Content for section 1" />;
             case 'Alert':
                 return <Alert message="This is an alert message!" />;
+            case 'Avatar':
+                return <AvatarMain message="This is avatar!" />;
             // Add cases for other components here
             default:
                 return <div>Select a component to view its code and details.</div>;
