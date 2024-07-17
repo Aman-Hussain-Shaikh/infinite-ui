@@ -20,7 +20,7 @@ function App() {
             <Route path='/future-roadmap' element={<Future />} />
 
             {/* Demo Component */}
-            <Route path='/demo-component' element={<Demo_Component />} />
+            <Route path='/docs/demo-component/:componentName?' element={<Demo_Component />} />
 
 
           </Routes>

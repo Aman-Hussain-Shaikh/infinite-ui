@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Alert = () => (
     <div className="bg-gray-100 p-6 min-h-screen text-blue-600">
@@ -9,7 +8,7 @@ const Alert = () => (
             <h2 className="text-xl font-semibold mt-6 mb-2">React Component Code</h2>
             <pre className="bg-gray-900 text-white p-4 rounded-lg overflow-auto">
                 <code className="language-jsx">
-{`
+                    {`
 import React, { useState } from 'react';
 
 const Alert = ({ message }) => {
@@ -49,7 +48,7 @@ export default Alert;
             <h2 className="text-xl font-semibold mt-6 mb-2">Usage Example</h2>
             <pre className="bg-gray-900 text-white p-4 rounded-lg overflow-auto">
                 <code className="language-jsx">
-{`
+                    {`
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Alert from './Alert';
