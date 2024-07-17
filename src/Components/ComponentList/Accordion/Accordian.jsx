@@ -1,15 +1,15 @@
-import React from 'react';
+
 
 const Accordion = () => (
-    <div className="bg-gray-100 p-6 min-h-screen text-blue-600">
-        <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
-            <h1 className="text-2xl font-bold mb-4">Accordion with Tailwind CSS and React JS</h1>
-            <p className="mb-4">This page demonstrates how to create an accordion using Tailwind CSS and React JS. Below is the code and its explanation.</p>
+  <div className="bg-gray-100 p-6 min-h-screen text-blue-600">
+    <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+      <h1 className="text-2xl font-bold mb-4">Accordion with Tailwind CSS and React JS</h1>
+      <p className="mb-4">This page demonstrates how to create an accordion using Tailwind CSS and React JS. Below is the code and its explanation.</p>
 
-            <h2 className="text-xl font-semibold mt-6 mb-2">React Component Code</h2>
-            <pre className="bg-gray-900 text-white p-4 rounded-lg overflow-auto">
-                <code className="language-jsx">
-{`
+      <h2 className="text-xl font-semibold mt-6 mb-2">React Component Code</h2>
+      <pre className="bg-gray-900 text-white p-4 rounded-lg overflow-auto">
+        <code className="language-jsx">
+          {`
 import React, { useState } from 'react';
 
 const AccordionItem = ({ title, content, isOpen, onClick }) => (
@@ -71,16 +71,16 @@ const Accordion = () => {
 export default Accordion;
 
 `}
-                </code>
-            </pre>
+        </code>
+      </pre>
 
-            <h2 className="text-xl font-semibold mt-6 mb-2">Explanation</h2>
-            <p className="mb-4">In this code, we define a functional component <code>Accordion</code> that takes <code>title</code> and <code>content</code> as props. The component uses the <code>useState</code> hook to manage its open/closed state. When the button is clicked, it toggles the state, showing or hiding the content accordingly.</p>
+      <h2 className="text-xl font-semibold mt-6 mb-2">Explanation</h2>
+      <p className="mb-4">In this code, we define a functional component <code>Accordion</code> that takes <code>title</code> and <code>content</code> as props. The component uses the <code>useState</code> hook to manage its open/closed state. When the button is clicked, it toggles the state, showing or hiding the content accordingly.</p>
 
-            <h2 className="text-xl font-semibold mt-6 mb-2">Usage Example</h2>
-            <pre className="bg-gray-900 text-white p-4 rounded-lg overflow-auto">
-                <code className="language-jsx">
-{`
+      <h2 className="text-xl font-semibold mt-6 mb-2">Usage Example</h2>
+      <pre className="bg-gray-900 text-white p-4 rounded-lg overflow-auto">
+        <code className="language-jsx">
+          {`
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Accordion from './Accordion';
@@ -95,13 +95,13 @@ const App = () => (
 
 ReactDOM.render(<App />, document.getElementById('root'));
 `}
-                </code>
-            </pre>
+        </code>
+      </pre>
 
-            <h2 className="text-xl font-semibold mt-6 mb-2">Explanation</h2>
-            <p className="mb-4">In this example, we import and use the <code>Accordion</code> component in our main <code>App</code> component. We render multiple <code>Accordion</code> components, each with different titles and content.</p>
-        </div>
+      <h2 className="text-xl font-semibold mt-6 mb-2">Explanation</h2>
+      <p className="mb-4">In this example, we import and use the <code>Accordion</code> component in our main <code>App</code> component. We render multiple <code>Accordion</code> components, each with different titles and content.</p>
     </div>
+  </div>
 );
 
 export default Accordion;
