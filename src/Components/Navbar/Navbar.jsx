@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import DarkModeToggle from "../DarkMode/DarkMode"
 
 const Navbar = () => {
   return (
@@ -37,6 +38,17 @@ const Navbar = () => {
           Future
         </li>
         </Link>
+
+        <hr className="w-px h-10 bg-white border-0 mx-auto" />
+
+        <DarkModeToggle />
+
+        <Link to='https://github.com/Aman-Hussain-Shaikh/infinite-ui'>
+          
+            <img src="/src/assets/Icons/github-square.svg" alt="Github Logo" className="w-10 " />
+        
+        </Link>
+
       </ul>
     </div>
   )

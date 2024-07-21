@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Alert from '../../../Components/ComponentList/Alert/Alert';
-import Accordion from '../../../Components/ComponentList/Accordion/Accordian'; // Fixed typo
+import Accordion from '../../../Components/ComponentList/Accordion/Accordian';
+import AvatarMain from '../../../Components/ComponentList/Avatar/AvatarMain';
 const components = [
     { name: "Accordion" },
     { name: "Alert" },

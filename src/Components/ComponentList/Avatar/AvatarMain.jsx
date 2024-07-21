@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar from './Avatar';
+import Avatar from '../../../pages/Home/Components_Page/Avatar';
 
 const AvatarMain = () => {
     return (
