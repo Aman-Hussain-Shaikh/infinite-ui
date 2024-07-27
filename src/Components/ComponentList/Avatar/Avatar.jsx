@@ -5,7 +5,7 @@ const Avatar = ({ src, alt, size }) => {
     
     return (
         <img
-            className={`rounded-full ${avatarSize}`}
+           className={`rounded-full ${avatarSize}`}
             src={src}
             alt={alt}
         />
