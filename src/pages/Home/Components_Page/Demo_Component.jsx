@@ -25,7 +25,7 @@ const Demo_Component = () => {
 
     useEffect(() => {
         if (componentName !== selectedComponent) {
-            navigate(`/docs/demo-component/${selectedComponent}`);
+            navigate(`/docs/components/${selectedComponent}`);
         }
     }, [selectedComponent, componentName, navigate]);
 

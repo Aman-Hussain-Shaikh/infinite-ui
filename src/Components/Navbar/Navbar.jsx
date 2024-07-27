@@ -20,7 +20,7 @@ const Navbar = () => {
           Home
         </li>
         </Link>
-        <Link to='/components'>
+        <Link to='/docs/components/:componentName?'>
 
         <li className="px-4 py-2 bg-blue-800 transition-colors rounded-md hover:bg-blue-500 hover:shadow-lg text-white cursor-pointer">
           Components
