@@ -15,12 +15,12 @@ function App() {
           <Navbar />
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/components' element={<Component_Page />} />
+            {/* <Route path='/components' element={<Component_Page />} /> */}
             <Route path='/blog' element={<Blog />} />
             <Route path='/future-roadmap' element={<Future />} />
 
             {/* Demo Component */}
-            <Route path='/docs/demo-component/:componentName?' element={<Demo_Component />} />
+            <Route path='/docs/components/:componentName?' element={<Demo_Component />} />
 
 
           </Routes>
