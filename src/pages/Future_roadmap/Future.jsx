@@ -1,4 +1,4 @@
-
+import road from '../../assets/FutureImages/road.png'
 const Future = () => {
   return (
     <>
@@ -9,7 +9,7 @@ const Future = () => {
           </div>
 
           <div className="flex-1  flex justify-end items-center mt-20 h-96">
-            <img src="/src/assets/FutureImages/road.png" alt="Roadmap" />
+            <img src={road} alt="Roadmap" />
           </div>
         </div>
       
