@@ -2,6 +2,16 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Alert from '../../../Components/ComponentList/Alert/Alert';
 import Accordion from '../../../Components/ComponentList/Accordion/Accordian'; // Fixed typo
+import AvatarMain from '../../../Components/ComponentList/Avatar/AvatarMain';
+import Banner from '../../../Components/ComponentList/Banner/Banner';
+import BottomNavigationPage from '../../../Components/ComponentList/BottomNavigation/Bottom';
+import Badge from '../../../Components/ComponentList/Badge/Badge';
+import BreadcrumbsPage from '../../../Components/ComponentList/Breadcrumb/BreadCrumbPage';
+import Buttons from '../../../Components/ComponentList/Buttons/Buttons';
+import ButtonGroup from '../../../Components/ComponentList/Button Group/ButtonGroup';
+import Calendar from '../../../Components/ComponentList/Calendar/Calendar';
+import DataTable from '../../../Components/ComponentList/Data Table/DataTable';
+import Drawer from '../../../Components/ComponentList/Drawer/Drawer';
 const components = [
     { name: "Accordion" },
     { name: "Alert" },
@@ -35,7 +45,25 @@ const Demo_Component = () => {
             case 'Alert':
                 return <Alert message="This is an alert message!" />;
             case 'Avatar':
-                return <AvatarMain message="This is avatar!" />;
+                return <AvatarMain  />;
+            case 'Badge':
+                return <Badge />
+            case 'Banner':
+                return <Banner  />;
+            case 'Bottom Navigation':
+                return <BottomNavigationPage  />;
+            case 'Breadcrumb':
+                return <BreadcrumbsPage  />;
+            case 'Buttons':
+                return <Buttons  />;
+            case 'Button Group':
+                return <ButtonGroup />
+            case 'Calendar':
+                return <Calendar />
+            case 'Data Table':
+                return <DataTable />
+            case 'Drawer':
+                return <Drawer />
             // Add cases for other components here
             default:
                 return <div>Select a component to view its code and details.</div>;
