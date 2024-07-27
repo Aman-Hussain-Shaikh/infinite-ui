@@ -28,9 +28,9 @@ const components = [
 ];
 
 const Demo_Component = () => {
-    const { componentName } = useParams();
+    // const { componentName } = useParams();
     const navigate = useNavigate();
-    const [selectedComponent, setSelectedComponent] = useState(componentName || 'Accordion');
+    const [selectedComponent, setSelectedComponent] = useState('Accordion');
 
     useEffect(() => {
         if (componentName !== selectedComponent) {
