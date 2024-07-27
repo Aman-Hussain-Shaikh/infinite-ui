@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import DarkModeToggle from "../DarkMode/DarkMode"
-
+import github from '../../assets/Icons/github-square.svg'
 const Navbar = () => {
   return (
     <div className="flex items-center justify-between h-16 bg-blue-600 transition-opacity rounded-3xl mt-2 mr-10 ml-10 shadow-lg px-6">
@@ -45,7 +45,7 @@ const Navbar = () => {
 
         <Link to='https://github.com/Aman-Hussain-Shaikh/infinite-ui'>
           
-            <img src="/src/assets/Icons/github-square.svg" alt="Github Logo" className="w-10 " />
+            <img src={github} alt="Github Logo" className="w-10 " />
         
         </Link>
 

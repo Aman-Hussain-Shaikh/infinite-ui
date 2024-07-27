@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 // import { useParams, useNavigate } from 'react-router-dom';
+import moon from '../../assets/Icons/moon.svg'
+import sun from '../../assets/Icons/sun.svg'
 
 const DarkModeToggle = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -19,9 +21,9 @@ const DarkModeToggle = () => {
     return (
         <button onClick={toggleDarkMode} className="p-2 rounded-full bg-gray-200 dark:bg-blue-200 transition duration-300">
             {isDarkMode ? (
-                <img src="/src/assets/Icons/moon.svg" alt="" />
+                <img src={moon} alt="" />
             ) : (
-               <img src='/src/assets/Icons/sun.svg' alt=''/>
+               <img src={sun} alt=''/>
             )}
         </button>
     );
