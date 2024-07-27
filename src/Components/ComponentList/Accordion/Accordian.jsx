@@ -1,15 +1,60 @@
+import React, { useState } from 'react';
 
+const AccordionItem = ({ title, content, isOpen, onClick }) => (
+  <div className="border-b">
+    <button
+      className="w-full text-left px-3 py-2 sm:px-4 sm:py-3 focus:outline-none"
+      onClick={onClick}
+    >
+      <div className="flex justify-between items-center">
+        <span className="text-base sm:text-lg font-medium">{title}</span>
+        <span>{isOpen ? '-' : '+'}</span>
+      </div>
+    </button>
+    {isOpen && (
+      <div className="px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base text-white-700">
+        {content}
+      </div>
+    )}
+  </div>
+);
 
-const Accordion = () => (
-  <div className="bg-gray-100 p-6 min-h-screen text-blue-600">
-    <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
-      <h1 className="text-2xl font-bold mb-4">Accordion with Tailwind CSS and React JS</h1>
-      <p className="mb-4">This page demonstrates how to create an accordion using Tailwind CSS and React JS. Below is the code and its explanation.</p>
+const Accordion = () => {
+  const [openIndex, setOpenIndex] = useState(null);
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">React Component Code</h2>
-      <pre className="bg-gray-900 text-white p-4 rounded-lg overflow-auto">
-        <code className="language-jsx">
-          {`
+  const handleToggle = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const items = [
+    {
+      title: 'Accordion Item 1',
+      content: 'Content for the first accordion item.'
+    },
+    {
+      title: 'Accordion Item 2',
+      content: 'Content for the second accordion item.'
+    },
+    {
+      title: 'Accordion Item 3',
+      content: 'Content for the third accordion item.'
+    }
+  ];
+
+  return (
+    <div className="bg-gradient-to-r from-blue-500 to-purple-600 min-h-screen p-6 text-white">
+      <div className="container mx-auto max-w-4xl bg-white rounded-lg shadow-2xl overflow-hidden">
+        <header className="bg-gray-800 p-6">
+          <h1 className="text-3xl font-bold mb-2">Accordion with Tailwind CSS and React JS</h1>
+          <p className="text-gray-300">Create interactive accordions with ease</p>
+        </header>
+
+        <main className="p-6">
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800">React Component Code</h2>
+            <div className="bg-gray-100 p-4 rounded-lg overflow-x-auto">
+              <pre className="bg-gray-800 p-6 rounded-lg text-white-100">
+              {`
 import React, { useState } from 'react';
 
 const AccordionItem = ({ title, content, isOpen, onClick }) => (
@@ -54,7 +99,7 @@ const Accordion = () => {
   ];
 
   return (
-    <div className="max-w-md mx-auto mt-5">
+    <div className="max-w-md mx-auto mt-5 text-white-100">
       {items.map((item, index) => (
         <AccordionItem
           key={index}
@@ -71,16 +116,15 @@ const Accordion = () => {
 export default Accordion;
 
 `}
-        </code>
-      </pre>
+              </pre>
+            </div>
+          </section>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">Explanation</h2>
-      <p className="mb-4">In this code, we define a functional component <code>Accordion</code> that takes <code>title</code> and <code>content</code> as props. The component uses the <code>useState</code> hook to manage its open/closed state. When the button is clicked, it toggles the state, showing or hiding the content accordingly.</p>
-
-      <h2 className="text-xl font-semibold mt-6 mb-2">Usage Example</h2>
-      <pre className="bg-gray-900 text-white p-4 rounded-lg overflow-auto">
-        <code className="language-jsx">
-          {`
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Usage Example</h2>
+            <div className="bg-gray-100 p-4 rounded-lg overflow-x-auto">
+              <pre className="bg-gray-800 p-6 rounded-lg text-white-100">
+              {`
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Accordion from './Accordion';
@@ -95,13 +139,32 @@ const App = () => (
 
 ReactDOM.render(<App />, document.getElementById('root'));
 `}
-        </code>
-      </pre>
+              </pre>
+            </div>
+          </section>
 
-      <h2 className="text-xl font-semibold mt-6 mb-2">Explanation</h2>
-      <p className="mb-4">In this example, we import and use the <code>Accordion</code> component in our main <code>App</code> component. We render multiple <code>Accordion</code> components, each with different titles and content.</p>
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Live Example</h2>
+            <div className="bg-gray-800 p-6 rounded-lg text-white-100">
+              {items.map((item, index) => (
+                <AccordionItem
+                  key={index}
+                  title={item.title}
+                  content={item.content}
+                  isOpen={openIndex === index}
+                  onClick={() => handleToggle(index)}
+                />
+              ))}
+            </div>
+          </section>
+        </main>
+
+        <footer className="bg-gray-100 p-4 mt-8 text-center text-gray-600">
+          <p>Created with ❤️ using React and Tailwind CSS</p>
+        </footer>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Accordion;
